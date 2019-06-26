@@ -10,9 +10,13 @@ html{
 }
 
 body{
-	background-color: #222;
+	/*background-color: #222;*/
 }
 
+
+
+
+/*--header---*/
 
 .header-container{
 	display: flex;
@@ -25,7 +29,7 @@ body{
 
 #novarosa-logo{
 	margin-left: 15.2%;
-	transition: margin 1s;
+	transition: margin-left 1s;
 	text-decoration: none;
 }
 
@@ -52,7 +56,7 @@ body{
 	padding: 37px 15px;
 	white-space: nowrap;
 	color: #555;
-	font-family: "Lato";
+	font-family: 'Lato', sans-serif;
 	font-weight: 500;
 	font-size: 15px;
 	letter-spacing: 3.4px;
@@ -72,17 +76,65 @@ body{
 }
 
 
+
+/*--landing-image---*/
+
 #landing-image-container{
 	background-image: url("images/landing-image.jpg");
 	background-repeat: no-repeat;
-	height: 200px;
-	width: 100%;
+	height: 488px;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	transition: height 1s;
 }
 
-img{
-	
+
+
+/*--dress-offer--*/
+
+#dress-offer-container{
+	display: flex;
+	justify-content: center;
+	margin-top: 37px;
 }
 
+.dress-offer-stack{
+	text-align: center;
+	letter-spacing: 2.2px;
+	width: 380px;
+
+	/*white-space: nowrap;*/
+}
+
+.dress-offer-stack h2{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 30px;
+	color: #444;
+	transition: font-size 0.5s;
+}
+
+.dress-offer-stack small{
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	color: #444;
+	font-weight: 400;
+	font-size: 15px;
+	margin-top: 17px;
+	margin-bottom: 20px;
+	transition: font-size 0.5s;
+}
+
+.dress-offer-stack h3{
+	font-family: 'Antic', sans-serif;
+	color: #4c4c4c;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+
+/*--respnsive--*/
 
 @media only screen and (max-width: 1500px){
 	#novarosa-logo{
@@ -93,12 +145,22 @@ img{
 	}
 }
 
+
+@media only screen and (max-width: 1000px){
+	#landing-image-container{
+		height: 428px;
+	}
+	.dress-offer-stack h2{
+		font-size: 26px;
+	}
+}
+
+
 @media only screen and (max-width: 768px){
 
 	#novarosa-logo{
 		margin: 0px auto 5px auto;
 	}
-
 	#novarosa-logo img{
 		height: 40px;
 	}
@@ -111,7 +173,27 @@ img{
 		right: 0;
 		margin-right: 5%;
 	}
-}
 
+
+	#landing-image-container{
+		height: 208px;
+	}
+
+
+	#dress-offer-container{
+		margin-top: 25px;
+	}
+
+	.dress-offer-stack h2{
+		line-height: 14px;
+		word-spacing: 30000px; 
+		font-size: 14px;
+	}
+	.dress-offer-stack small{
+		font-size: 9px;
+		margin-top: 10px;
+		margin-bottom: 11px;
+	}
+}
 
 

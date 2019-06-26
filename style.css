@@ -24,13 +24,13 @@ body{
 }
 
 #novarosa-logo{
+	margin-left: 15.2%;
 	transition: margin 1s;
 	text-decoration: none;
-	margin-left: 4%;
 }
 
 #novarosa-logo img{
-	margin-top: 25px;
+	margin-top: 23px;
 	height: 52px;
 }
 
@@ -67,19 +67,29 @@ body{
 
 #menu-button{
 	cursor: pointer;
-	width: 15px;
+	width: 16px;
 	display: none;
 }
 
 
+#landing-image-container{
+	background-image: url("images/landing-image.jpg");
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+}
+
+img{
+	
+}
 
 
 @media only screen and (max-width: 1500px){
 	#novarosa-logo{
-		margin-left: 5%;
+		margin-left: 5.5%;
 	}
 	#main-nav{
-		margin-right: 3%;
+		margin-right: 3.9%;
 	}
 }
 

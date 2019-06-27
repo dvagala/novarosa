@@ -13,6 +13,19 @@ body{
 	/*background-color: #222;*/
 }
 
+#hr-container{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+hr{
+	margin: 20px auto;
+	max-width: 1120px;
+/*	height: 1px;
+	color: #131313;
+	background-color: #131313;
+	border: none;*/
+}
 
 
 
@@ -103,8 +116,6 @@ body{
 	text-align: center;
 	letter-spacing: 2.2px;
 	width: 380px;
-
-	/*white-space: nowrap;*/
 }
 
 .dress-offer-stack h2{

@@ -54,6 +54,9 @@ h1{
 	font-weight: 600;
 	font-size: 55px;
 	transition: font-size 0.5s;	
+	line-height: 53px;
+	margin-top: 17px;
+	margin-bottom: 17px;
 }
 
 h4{
@@ -69,21 +72,25 @@ p{
 	line-height: 27px;
 	color: #939393;
 	font-weight: 300;
+	margin: 17px 0px;
 }
 
 /*--header---*/
 
-#header-sticky-wrapper{
-
+#sticky-header{
+	position: sticky;
+	top: 0px;
+	z-index: 1;
 }
 
-.header-container{
+#header-container{
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	background-color: #fff;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 1px solid #d6d6d6;
 }
 
 #novarosa-logo{
@@ -143,7 +150,7 @@ p{
 #landing-image-container{
 	background-image: url("images/landing-image.jpg");
 	background-repeat: no-repeat;
-	height: 489px;
+	height: 488px;
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
@@ -217,12 +224,13 @@ p{
 #about-section-container{
 	display: flex;
 	justify-content: center;
-	width: 1150px;
+	align-items: center;
+	max-width: 57%;
 	margin: 151px auto 1000px auto;
 }
 
 #about-section-container img{
-   width: 100%;
+	width: 100%;
 }
 
 #about-section-column1{
@@ -233,16 +241,14 @@ p{
 #about-section-column2{
 	width: 309px;
 	width: 32%;
+	padding: 0px 35px;
 }
 
 #about-section-column3{
 	width: 309px;
 	width: 32%;
+	padding: 0px 35px;
 }
-
-412
-369
-392
 
 .small-divider{
 	background-color: #00CE1B;
@@ -256,7 +262,7 @@ p{
 
 /*--animations--*/
 
-@keyframes fade-in{
+/*@keyframes fade-in{
   from { opacity: 0;}
 }
 
@@ -264,7 +270,7 @@ p{
   from {margin-top: -45px; opacity: 0;}
 }
 
-
+*/
 
 /*--respnsive--*/
 

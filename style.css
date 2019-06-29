@@ -31,11 +31,16 @@ hr{
 	border: none;*/
 }
 
+button, h1, h2, h4, p, small{
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 2.2px;
+}
+
+
+
 button{
 	display: block;
 	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: 2.2px;
 	font-size: 15px;
 	font-weight: 500;
 	border: none;
@@ -44,8 +49,33 @@ button{
 	cursor: pointer;
 }
 
+h1{
+	color: #1e1e1e;
+	font-weight: 600;
+	font-size: 55px;
+	transition: font-size 0.5s;	
+}
+
+h4{
+	color: #939393;
+	font-weight: 300;
+	font-size: 15px;
+	transition: font-size 0.5s;	
+	text-transform: uppercase;
+}
+
+p{
+	font-size: 15px;
+	line-height: 27px;
+	color: #939393;
+	font-weight: 300;
+}
 
 /*--header---*/
+
+#header-sticky-wrapper{
+
+}
 
 .header-container{
 	display: flex;
@@ -60,6 +90,8 @@ button{
 	margin-left: 15.2%;
 	transition: margin-left 1s;
 	text-decoration: none;
+		position: sticky;
+	top: 0px;
 }
 
 #novarosa-logo img{
@@ -133,12 +165,10 @@ button{
 
 .dress-offer-stack{
 	text-align: center;
-	letter-spacing: 2.2px;
 	width: 380px;
 }
 
 .dress-offer-stack h2{
-	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
 	font-size: 30px;
 	color: #444;
@@ -147,7 +177,6 @@ button{
 
 .dress-offer-stack small{
 	display: block;
-	font-family: 'Roboto', sans-serif;
 	color: #7a7a7a;
 	font-weight: 400;
 	font-size: 15px;
@@ -158,6 +187,7 @@ button{
 
 .dress-offer-stack h3{
 	font-family: 'Antic', sans-serif;
+	letter-spacing: 2.2px;
 	color: #4c4c4c;
 	font-weight: bold;
 	font-size: 30px;
@@ -178,6 +208,49 @@ button{
 	animation-duration: 1s;
 	animation-timing-function: ease-in-out;
 }
+
+
+/* About section */
+
+
+
+#about-section-container{
+	display: flex;
+	justify-content: center;
+	width: 1150px;
+	margin: 151px auto 1000px auto;
+}
+
+#about-section-container img{
+   width: 100%;
+}
+
+#about-section-column1{
+	width: 377px;
+	width: 35,9%;
+}
+
+#about-section-column2{
+	width: 309px;
+	width: 32%;
+}
+
+#about-section-column3{
+	width: 309px;
+	width: 32%;
+}
+
+412
+369
+392
+
+.small-divider{
+	background-color: #00CE1B;
+	width: 56px;
+	height: 2px;
+}
+
+
 
 
 

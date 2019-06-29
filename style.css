@@ -9,22 +9,19 @@ html{
     overflow-y:scroll;
 }
 
-body{
-	/*background-color: #222;*/
-}
-
-main{
-	width: 100%;
+#main-container{
+	max-width: 1190px;
+	background-color: #eff;
+	margin: 0px auto;
+	padding: 37px 25px;
 }
 
 #hr-container{
-	margin-left: 10px;
-	margin-right: 10px;
+/*	margin-left: 10px;
+	margin-right: 10px;*/
 }
 
 hr{
-	margin: 0px auto;
-	max-width: 1120px;
 /*	height: 1px;
 	color: #131313;
 	background-color: #131313;
@@ -54,9 +51,9 @@ h1{
 	font-weight: 600;
 	font-size: 55px;
 	transition: font-size 0.5s;	
-	line-height: 53px;
+	line-height: 55px;
 	margin-top: 17px;
-	margin-bottom: 17px;
+	margin-bottom: 21px;
 }
 
 h4{
@@ -75,7 +72,7 @@ p{
 	margin: 17px 0px;
 }
 
-/*--header---*/
+/*--header------------------------------------------------------------------------------*/
 
 #sticky-header{
 	position: sticky;
@@ -145,7 +142,7 @@ p{
 
 
 
-/*--landing-image---*/
+/*--landing-image------------------------------------------------------------------------------*/
 
 #landing-image-container{
 	background-image: url("images/landing-image.jpg");
@@ -162,17 +159,16 @@ p{
 
 
 
-/*--dress-offer--*/
+/*--dress-offer----------------------------------------------------------------------------------*/
 
 #dress-offer-container{
 	display: flex;
-	justify-content: center;
-	margin-top: 37px;
+	justify-content: space-around;
 }
 
 .dress-offer-stack{
 	text-align: center;
-	width: 380px;
+	flex: 1;
 }
 
 .dress-offer-stack h2{
@@ -200,6 +196,7 @@ p{
 	font-size: 30px;
 }
 
+
 #whole-offer-button-container{
 	height: 117px;
 	display: flex;
@@ -217,50 +214,49 @@ p{
 }
 
 
-/* About section */
 
-
+/*---About section--------------------------------------------------------------------------- */
 
 #about-section-container{
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	max-width: 57%;
-	margin: 151px auto 1000px auto;
+	margin-top: 151px;
 }
 
 #about-section-container img{
 	width: 100%;
 }
 
+
 #about-section-column1{
-	width: 377px;
-	width: 35,9%;
+	width: 55%;
+}
+
+#about-section-column2, #about-section-column3{
+	width: 45%;
 }
 
 #about-section-column2{
-	width: 309px;
-	width: 32%;
-	padding: 0px 35px;
+	margin-right: 70px;
+	margin-left: 30px;
 }
 
-#about-section-column3{
-	width: 309px;
-	width: 32%;
-	padding: 0px 35px;
+#about-heading{
+	margin-top: -20px;
 }
 
 .small-divider{
 	background-color: #00CE1B;
 	width: 56px;
 	height: 2px;
+	margin-bottom: 23px;
 }
 
 
 
 
-
-/*--animations--*/
+/*--animations-----------------------------------------------------------------------------*/
 
 /*@keyframes fade-in{
   from { opacity: 0;}
@@ -272,7 +268,7 @@ p{
 
 */
 
-/*--respnsive--*/
+/*--respnsive-----------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1500px){
 	#novarosa-logo{
@@ -284,6 +280,14 @@ p{
 }
 
 @media only screen and (max-width: 1000px){
+	h1{
+		font-size: 45px;
+		line-height: 45px;
+	}
+	#sticky-header{
+		position: static;
+	}
+
 	#landing-image-container{
 		height: 428px;
 	}
@@ -293,6 +297,11 @@ p{
 }
 
 @media only screen and (max-width: 768px){
+
+	h1{
+		font-size: 31px;
+		line-height: 31px;
+	}
 
 	#novarosa-logo{
 		margin: 0px auto 5px auto;
@@ -315,10 +324,10 @@ p{
 		height: 208px;
 	}
 
-
-	#dress-offer-container{
-		margin-top: 25px;
+	#main-container{
+		padding: 25px 10px;
 	}
+
 
 	.dress-offer-stack h2{
 		line-height: 14px;
@@ -337,6 +346,28 @@ p{
 		margin-top: -2px;
 	}
 
+	#about-section-container{
+		flex-direction: column;
+	}
+
+	#about-section-column1, #about-section-column2{
+		width: 100%;
+	}
+
+	#about-section-column2{
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+
+	#about-section-column3{
+		display: none;
+	}
+
+	#about-section-column2-p:after{
+		content: "\aOdborný personál je zárukou Vašej spokojnosti.";
+		white-space: pre;
+	}
 }
 
 

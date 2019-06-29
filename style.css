@@ -9,11 +9,11 @@ html{
     overflow-y:scroll;
 }
 
-#main-container-parent{
+/*#main-container-parent{
 	background-color: red;
 	text-align: center;
 }
-	
+	*/
 
 #main-container{
 	max-width: 1190px;
@@ -73,10 +73,13 @@ p{
 	margin: 17px 0px;
 }
 
+
+
 /*--header------------------------------------------------------------------------------*/
 
 #sticky-header{
 	position: sticky;
+	width: 100%;
 	top: 0px;
 	z-index: 1;
 }
@@ -95,7 +98,7 @@ p{
 	margin-left: 15.2%;
 	transition: margin-left 1s;
 	text-decoration: none;
-		position: sticky;
+	position: sticky;
 	top: 0px;
 }
 
@@ -174,7 +177,7 @@ p{
 
 .dress-offer-stack h2{
 	font-weight: 600;
-	font-size: 30px;
+	font-size: calc(20px + 0.54vw);
 	color: #444;
 	transition: font-size 0.5s;
 }
@@ -349,9 +352,6 @@ p{
 	#landing-image-container{
 		height: 428px;
 	}
-	.dress-offer-stack h2{
-		font-size: 26px;
-	}
 }
 
 @media only screen and (max-width: 768px){
@@ -363,6 +363,8 @@ p{
 
 	#novarosa-logo{
 		margin: 0px auto 5px auto;
+		width: 100%;
+		text-align: center;
 	}
 	#novarosa-logo img{
 		height: 40px;
@@ -388,9 +390,9 @@ p{
 
 
 	.dress-offer-stack h2{
-		line-height: 14px;
+		line-height: 16px;
 		word-spacing: 30000px; 
-		font-size: 14px;
+		font-size: calc(9px + 1vw);
 	}
 	.dress-offer-stack small{
 		font-size: 9px;

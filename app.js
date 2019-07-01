@@ -11,13 +11,10 @@ console.log(detailTabs);
 
 summaryTabs.forEach((summaryTab, index) => {
 
-    
-
-
     console.dir(summaryTab);
     // console.dir(blackTriangleIcon);
-
     summaryTab.addEventListener("click", function(){
+
         blackTriangleIcon = summaryTab.querySelector(".black-triangle");
         greenTriangleIcon = summaryTab.querySelector(".green-triangle");
         // Collapse details                 
@@ -30,8 +27,15 @@ summaryTabs.forEach((summaryTab, index) => {
             blackTriangleIcon.style.display = "none";
             greenTriangleIcon.style.display = "block";
         }
+
+        // summaryTab.classList.toggle("summary-tab-collapsed");
+        // summaryTab.classList.toggle("summary-tab-expanded");
+        
+        detailTabs[index].classList.toggle("details-tab-collapsed");
+        detailTabs[index].classList.toggle("details-tab-expanded");
     });
 });
+
 
 
 

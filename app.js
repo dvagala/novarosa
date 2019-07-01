@@ -4,13 +4,14 @@
 services_section = document.getElementById("services-section-column2");
 
 summaryTabs = document.querySelectorAll(".summary-tab");
-detailsContentsP = document.querySelectorAll("#services-section-column2 > p");
+detailTabs = document.querySelectorAll(".details-tab");
 
 // console.log(summaryTabs);
-// console.log(detailsContentsP);
+console.log(detailTabs);
 
 summaryTabs.forEach((summaryTab, index) => {
 
+    
 
 
     console.dir(summaryTab);
@@ -19,11 +20,13 @@ summaryTabs.forEach((summaryTab, index) => {
     summaryTab.addEventListener("click", function(){
         blackTriangleIcon = summaryTab.querySelector(".black-triangle");
         greenTriangleIcon = summaryTab.querySelector(".green-triangle");
+        // Collapse details                 
         if (blackTriangleIcon.style.display == "none") {
             blackTriangleIcon.style.display = "block";
             greenTriangleIcon.style.display = "none";
         }
         else{
+            // Expand details                 
             blackTriangleIcon.style.display = "none";
             greenTriangleIcon.style.display = "block";
         }

@@ -15,6 +15,7 @@ html{
 }
 	*/
 
+
 #main-container{
 	max-width: 1190px;
 	background-color: #eff;
@@ -335,17 +336,23 @@ img{
 .details-tab{
 	font-size: 16px;
 	color: #939393;
-	/* line-height: 25.6px; */
 	font-weight: 300;
 	padding: 0px 12px;
 	line-height: 27px;
-	/* display: none; */
 	list-style-position: inside;
+	overflow: hidden;
+	/* height: 50px; */
+	height: 100%;
+	transition: all 1s;
 }
 
 .details-tab p{
 	margin-top: 15px;
 	font-size: 17px;
+}
+
+.details-tab:hover{
+	height: 0px;
 }
 
 .summary-tab h3{

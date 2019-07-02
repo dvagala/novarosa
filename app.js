@@ -9,32 +9,41 @@ detailTabs = document.querySelectorAll(".details-tab");
 // console.log(summaryTabs);
 console.log(detailTabs);
 
+detailTabsHeights = new Array();
+
 summaryTabs.forEach((summaryTab, index) => {
 
-    console.dir(summaryTab);
+    detailTabs[index].style.height = "100%";
+
+    console.log(detailTabs[index].offsetHeight);
+    detailTabsHeights.push(detailTabs[index].offsetHeight);
+
+    detailTabs[index].style.height = "0px";
+
     // console.dir(blackTriangleIcon);
     summaryTab.addEventListener("click", function(){
 
-        blackTriangleIcon = summaryTab.querySelector(".black-triangle");
-        greenTriangleIcon = summaryTab.querySelector(".green-triangle");
-        // Collapse details                 
-        if (blackTriangleIcon.style.display == "none") {
-            blackTriangleIcon.style.display = "block";
-            greenTriangleIcon.style.display = "none";
-        }
-        else{
-            // Expand details                 
-            blackTriangleIcon.style.display = "none";
-            greenTriangleIcon.style.display = "block";
+        summaryTab.querySelector(".black-triangle").classList.toggle("displayed-none");
+        summaryTab.querySelector(".green-triangle").classList.toggle("displayed-none");
+
+        if(detailTabs[index].style.transition == ""){
+            console.log("transition was:" + detailTabs[index].style.transition);
+            detailTabs[index].style.transition = "height 0.5s";
+            console.log("setting transition");
         }
 
-        // summaryTab.classList.toggle("summary-tab-collapsed");
-        // summaryTab.classList.toggle("summary-tab-expanded");
-        
-        detailTabs[index].classList.toggle("details-tab-collapsed");
-        detailTabs[index].classList.toggle("details-tab-expanded");
+        if(detailTabs[index].style.height == "0px"){
+            console.log("setting height to " + detailTabsHeights[index].toString() + "px");
+            detailTabs[index].style.height = detailTabsHeights[index].toString() + "px";
+        } else{
+            console.log("setting height to 0px");
+            detailTabs[index].style.height = "0px";
+        }
     });
+
+
 });
+
 
 
 

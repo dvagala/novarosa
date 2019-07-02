@@ -298,6 +298,7 @@ img{
 	width: 51%;
 	margin-right: 2%;
 	border-bottom: solid 1px #E5E5E5;
+	transition: all 1s;
 } 
 
 #services-section-column1 h4{
@@ -335,6 +336,7 @@ img{
 }
 
 .details-tab{
+	/* transition: height 0.5s; */
 	font-size: 16px;
 	color: #939393;
 	font-weight: 300;
@@ -342,15 +344,7 @@ img{
 	line-height: 27px;
 	list-style-position: inside;
 	overflow: hidden;
-	/* transition: all 0.5s; */
-}
-
-.details-tab-collapsed{
-    height: 0px;
-}
-
-.details-tab-expanded{
-    max-height: 100%;
+	height: 0px;
 }
 
 .details-tab p{
@@ -365,19 +359,19 @@ img{
 	font-weight: 500;
 }
 
-
 .summary-tab .black-triangle{
 	height: 12px;
 	padding-bottom: -50px;
 }
 
 .summary-tab .green-triangle{
-	display: none;
 	width: 13px;
 	margin-right: -2px;
 }
 
-
+.displayed-none{
+	display: none;
+}
 
 
 

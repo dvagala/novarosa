@@ -361,11 +361,13 @@ img{
 
 .summary-tab .black-triangle{
 	height: 12px;
+	width: 7px;
 	padding-bottom: -50px;
 }
 
 .summary-tab .green-triangle{
 	width: 13px;
+	height: 7px;
 	margin-right: -2px;
 }
 

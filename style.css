@@ -281,7 +281,7 @@ img{
 #services-section-container{
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin-top: 151px;
 	margin-bottom: 120px;
 }
@@ -414,7 +414,7 @@ img{
 
 /*--animations-----------------------------------------------------------------------------*/
 
-/*@keyframes fade-in{
+@keyframes fade-in{
   from { opacity: 0;}
 }
 
@@ -422,7 +422,7 @@ img{
   from {margin-top: -45px; opacity: 0;}
 }
 
-*/
+
 
 /*--respnsive-----------------------------------------------------------------------------*/
 

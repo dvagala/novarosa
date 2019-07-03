@@ -1,49 +1,45 @@
 
-// window.onblur = function() {window.onfocus= function () {location.reload(true)}};
 
-summaryTabs = document.querySelectorAll(".summary-tab");
-detailTabs = document.querySelectorAll(".details-tab");
+// little workaround to do transition when expanding custom details/summary tabs
+// from 0px to 100% height
+function detailsTabTransitionWorkarond() {
+    function onSummaryTabClick(evt)
+    {
+        var summaryTab = this;
+        var DetailTabHeightInPx = evt.currentTarget.DetailTabHeightInPx;
+        var detailTab = evt.currentTarget.detailTab;
 
-detailTabsHeights = new Array();
+        summaryTab.querySelector(".black-triangle").classList.toggle("displayed-none");
+        summaryTab.querySelector(".green-triangle").classList.toggle("displayed-none");
 
-console.log(summaryTabs);
+        if(detailTab.style.transition == ""){
+            detailTab.style.transition = "height 0.5s";
+        }
 
-for (let index = 0; index < summaryTabs.length; index++) {
-    detailTabs[index].style.height = "100%";
-
-    console.log(detailTabs[index].offsetHeight);
-    detailTabsHeights.push(detailTabs[index].offsetHeight);
-
-    detailTabs[index].style.height = "0px";
-
-    summaryTabs[index].addEventListener("click", onSummaryTabClick, false);
-    summaryTabs[index].param = index;
-}
-
-
-function onSummaryTabClick(evt)
-{
-    console.log(evt.currentTarget.param);
-
-    index = evt.currentTarget.param;
-
-    summaryTabs[index].querySelector(".black-triangle").classList.toggle("displayed-none");
-    summaryTabs[index].querySelector(".green-triangle").classList.toggle("displayed-none");
-
-    console.log("index: " + index);
-
-    if(detailTabs[index].style.transition == ""){
-        console.log("transition was:" + detailTabs[index].style.transition);
-        detailTabs[index].style.transition = "height 0.5s";
-        console.log("setting transition");
+        if(detailTab.style.height == "0px"){
+            detailTab.style.height = DetailTabHeightInPx.toString() + "px";
+        } else{
+            detailTab.style.height = "0px";
+        }
     }
 
-    if(detailTabs[index].style.height == "0px"){
-        console.log("setting height to " + detailTabsHeights[index].toString() + "px");
-        detailTabs[index].style.height = detailTabsHeights[index].toString() + "px";
-    } else{
-        console.log("setting height to 0px");
-        detailTabs[index].style.height = "0px";
+    var summaryTabs = document.querySelectorAll(".summary-tab");
+    var detailTabs = document.querySelectorAll(".details-tab");
+
+    for (let index = 0; index < summaryTabs.length; index++) {
+
+        var summaryTab = summaryTabs[index];
+        var detailTab = detailTabs[index];
+
+        detailTab.style.height = "100%";
+        var DetailTabHeightInPx = detailTab.offsetHeight;
+        detailTab.style.height = "0px";
+
+        summaryTab.addEventListener("click", onSummaryTabClick, false);
+        summaryTab.detailTab = detailTab;
+        summaryTab.DetailTabHeightInPx = DetailTabHeightInPx;
     }
 }
 
+
+detailsTabTransitionWorkarond();

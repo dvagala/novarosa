@@ -9,8 +9,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+	<div id="dummy-page-top"></div>
 	<header id="sticky-header">
 		<div id="header-container">
 			<a id="novarosa-logo" href="index.html">
@@ -18,11 +20,11 @@
 			</a>
 			<nav id="main-nav">
 				<ul>
-					<a href=""><li>Domov</li></a>
-					<a href=""><li>O nás</li></a>
-					<a href=""><li>Služby</li></a>
-					<a href=""><li>Galéria</li></a>
-					<a href=""><li>Kontakt</li></a>
+					<a href="#dummy-page-top"><li>Domov</li></a>
+					<a href="#about-section-container"><li>O nás</li></a>
+					<a href="#services-section-container"><li>Služby</li></a>
+					<a href="gallery.html"><li>Galéria</li></a>
+					<a href="#contact-section-container"><li>Kontakt</li></a>
 				</ul>
 			</nav>
 			<img id="menu-button" src="images/burger-icon.svg"/>
@@ -153,7 +155,7 @@
 
 	<div class="page-content-container" id="bottom-page-content">
 
-		<div id="contact-container">
+		<div id="contact-section-container">
 			<div class="contact-stack">
 				<h2>Adresa</h2>
 				<p>Študentská 45<br>Trnava, 91701</p>
@@ -167,21 +169,20 @@
 				<p>Tel: 0915 712 771<br>Email: <a href="">obchod@novarosa.sk</a></p>
 			</div>
 		</div>
-		<!-- <div style="height: 1000px"></div> -->
 	</div>
 
 	<footer>
 		<div id="footer-content">
 			<div id="footer-info">
-				<p>© Copyright Nova Rosa s.r.o. 2008  |  Website design by <a href="">Dominik Vagala</a></p>			
+				<p>&copy; Copyright Nova Rosa s.r.o. 2008  |  Website design by <a href="">Dominik Vagala</a></p>			
 			</div>
 			<nav id="footer-nav">
 				<ul>
-					<li><a href="">Domov</a></li>			
-					<li><a href="">O nás</a></li>
-					<li><a href="">Služby</a></li>
-					<li><a href="">Galéria</a></li>
-					<li><a href="">Kontakt</a></li>
+					<li><a href="#dummy-page-top">Domov</a></li>			
+					<li><a href="#about-section-container">O nás</a></li>
+					<li><a href="#services-section-container">Služby</a></li>
+					<li><a href="gallery.html">Galéria</a></li>
+					<li><a href="#contact-section-container">Kontakt</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -189,4 +190,4 @@
 
 	<script src="app.js"></script>
 </body>
-</html>
+</html>				

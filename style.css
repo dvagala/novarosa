@@ -6,13 +6,13 @@
 }
 
 html{
-    overflow-y:scroll;
+	overflow-y:scroll;
+	/* scroll-behavior: smooth;  */
 }
 
 
 .page-content-container{
 	max-width: 1190px;
-	/* background-color: #eff; */
 	margin: 0px auto;
 	padding: 37px 25px;
 }
@@ -236,8 +236,8 @@ img{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 151px;
-	margin-bottom: 120px;
+	padding-top: 151px;
+	padding-bottom: 120px;
 }
 
 #about-section-container img{
@@ -283,8 +283,8 @@ img{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-top: 151px;
-	margin-bottom: 120px;
+	padding-top: 151px;
+	padding-bottom: 120px;
 }
 
 #services-section-column1{
@@ -337,7 +337,6 @@ img{
 }
 
 .details-tab{
-	/* transition: height 0.5s; */
 	font-size: 16px;
 	color: #939393;
 	font-weight: 300;
@@ -393,7 +392,7 @@ img{
 	padding-right: 0px;
 }
 
-#contact-container{
+#contact-section-container{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -430,6 +429,7 @@ footer{
 #footer-content{
 	max-width: 1350px;
 	margin: 0px auto;
+	padding: 0px 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -441,9 +441,8 @@ footer{
 	font-weight: 500;
 	color: #aaa;
 	font-family: "Lato";
+	white-space: pre-wrap;
 }
-
-
 
 footer a{
 	color: #7496AB;
@@ -454,13 +453,13 @@ footer a:hover{
 	color: #efefef;
 }
 
-#footer-nav{
-}
 
 #footer-nav ul{	
 	display: flex;
 	list-style: none;
 	margin: 33px 0px;
+	margin-left: 20px;
+	flex-wrap: nowrap;
 }
 
 #footer-nav li{
@@ -468,6 +467,7 @@ footer a:hover{
 	font-size: 15px;
 	letter-spacing: 4.3px;
 	font-weight: 400;
+	white-space: nowrap;
 }
 
 #footer-nav li:not(:first-child):before {
@@ -527,6 +527,8 @@ footer a:hover{
 		margin-top: 50px;
 	}
 
+
+
 	
 }
 
@@ -585,10 +587,12 @@ footer a:hover{
 
 	#about-section-container{
 		flex-direction: column;
+		/* max-height: 650px;	For dumb ie */
+
 	}
-	#about-section-column1, #about-section-column2{
+	 #about-section-column1, #about-section-column2{
 		width: 100%;
-	}
+	} 
 	#about-section-column2{
 		margin-right: 0px;
 		margin-left: 0px;
@@ -604,7 +608,8 @@ footer a:hover{
 	}
 	#section1-image1{
 		display: none;
-	}
+	} 
+
 
 	#services-section-container{
 		flex-direction: column;
@@ -612,6 +617,29 @@ footer a:hover{
 
 	#services-section-column1, #services-section-column2{
 		width: 100%;
+	}
+
+
+	#contact-section-container{
+		flex-direction: column;
+	}
+
+	.contact-stack{
+		flex: 0 1 auto;	
+	}
+
+	#footer-content{
+		flex-direction: column-reverse;
+	}
+
+	#footer-info p{
+		text-align: center;
+	}
+
+	#footer-nav ul{
+		justify-content: center;
+		margin: 0px;
+		margin-top: 20px;
 	}
 
 }

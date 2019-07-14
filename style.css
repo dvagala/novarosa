@@ -1,4 +1,6 @@
 
+/*ANCHOR global*/
+
 *{
 	margin: 0px;
 	padding: 0px;
@@ -25,23 +27,13 @@ hr{
 	border: none;
 }
 
-button, h1, h2, h3, h4, p, small, li{
+button, h1, h2, h3, h4, p, small, li, a{
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 2.2px;
 }
 
 
 
-button{
-	display: block;
-	color: #fff;
-	font-size: 15px;
-	font-weight: 500;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	cursor: pointer;
-}
 
 h1{
 	color: #1e1e1e;
@@ -62,7 +54,11 @@ h4{
 
 p{
 	font-size: 15px;
-	line-height: 27px;
+	/* line-height: 27px; */
+	line-height: calc(9px + 1.9vh);
+	
+
+	/* line-height: 3vh; */
 	color: #939393;
 	font-weight: 300;
 	margin: 17px 0px;
@@ -91,6 +87,7 @@ img{
 
 
 /*--header------------------------------------------------------------------------------*/
+/*ANCHOR header*/
 
 #sticky-header{
 	position: sticky;
@@ -173,17 +170,20 @@ img{
 }
 
 
+/*ANCHOR dress offer*/
 
 /*--dress-offer----------------------------------------------------------------------------------*/
 
 #dress-offer-container{	
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .dress-offer-stack{
 	text-align: center;
 	flex: 1;
+	/* margin: 0px 7px; */
 }
 
 .dress-offer-stack h2{
@@ -201,6 +201,7 @@ img{
 	margin-top: 16px;
 	margin-bottom: 20px;
 	transition: font-size 0.5s;
+	white-space: nowrap;
 }
 
 .dress-offer-stack h3{
@@ -211,7 +212,6 @@ img{
 	font-size: 30px;
 }
 
-
 #whole-offer-button-container{
 	height: 117px;
 	display: flex;
@@ -220,6 +220,14 @@ img{
 }
 
 #whole-offer-button{
+	display: block;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
 	margin-top: 15px;
 	padding: 10px 24px 11px 24px;
 	background-color: #61CE70;
@@ -229,6 +237,7 @@ img{
 }
 
 
+/*ANCHOR about section*/
 
 /*---About section--------------------------------------------------------------------------- */
 
@@ -258,10 +267,6 @@ img{
 	margin-left: 30px;
 }
 
-#about-heading{
-	margin-top: -20px;
-}
-
 .small-divider{
 	background-color: #00CE1B;
 	width: 56px;
@@ -276,6 +281,7 @@ img{
 
 
 
+/*ANCHOR services section*/
 
 /*---Services section--------------------------------------------------------------------------- */
 
@@ -284,7 +290,7 @@ img{
 	justify-content: space-between;
 	align-items: flex-start;
 	padding-top: 151px;
-	padding-bottom: 120px;
+	padding-bottom: 0px;
 }
 
 #services-section-column1{
@@ -302,13 +308,9 @@ img{
 	transition: all 0.5s;
 } 
 
-#services-section-column1 h4{
-	margin-top: -20px;
-}
-
 #services-section-column1 h1{
 	font-size: 35px;
-	line-height: 45.5px;
+	line-height: normal;
 	font-weight: 900;
 }
 
@@ -375,13 +377,15 @@ img{
 	display: none;
 }
 
+/*ANCHOR contact section*/
 
 /*---Map--------------------------------------------------------------------------- */
 
 #map{
 	width: 100%;
-	height: 500px;
+	height: 600px;
 	border: none;
+	padding-top: 100px;
 }
 
 
@@ -417,8 +421,16 @@ img{
 	color: #1e1e1e;
 }
 
+.contact-stack a{
+	color: #333;
+}
+
+.contact-stack a:hover{
+	color: #000;
+}
 
 
+/*ANCHOR footer*/
 
 /*--footer-----------------------------------------------------------------------------*/
 
@@ -457,13 +469,15 @@ footer a:hover{
 #footer-nav ul{	
 	display: flex;
 	list-style: none;
-	margin: 33px 0px;
+	margin: 25px 0px;
 	margin-left: 20px;
-	flex-wrap: nowrap;
+	flex-flow: row wrap;
+	/* flex-wrap: nowrap; */
 }
 
 #footer-nav li{
 	font-family: "Lato";
+	margin: 8px 0px;
 	font-size: 15px;
 	letter-spacing: 4.3px;
 	font-weight: 400;
@@ -479,6 +493,7 @@ footer a:hover{
 
 
 
+/*ANCHOR animations*/
 
 /*--animations-----------------------------------------------------------------------------*/
 
@@ -503,6 +518,9 @@ footer a:hover{
 	}
 }
 
+
+/*ANCHOR responsive tablet*/
+
 @media only screen and (max-width: 1000px){
 	h1{
 		font-size: 45px;
@@ -524,13 +542,12 @@ footer a:hover{
 		padding-top: 17px;
 	}
 	#services-section-column2{
-		margin-top: 50px;
+		/* margin-top: 50px; */
+		margin-top: 2vh;
 	}
-
-
-
-	
 }
+
+/*ANCHOR responsive mobile*/
 
 @media only screen and (max-width: 768px){
 
@@ -586,9 +603,9 @@ footer a:hover{
 
 
 	#about-section-container{
+		padding: 5vh 0px;
 		flex-direction: column;
-		/* max-height: 650px;	For dumb ie */
-
+		max-height: 1000px;	/*For dumb ie*/
 	}
 	 #about-section-column1, #about-section-column2{
 		width: 100%;
@@ -596,6 +613,9 @@ footer a:hover{
 	#about-section-column2{
 		margin-right: 0px;
 		margin-left: 0px;
+	}
+	#about-section-column2 p{
+		margin-bottom: 0px;
 	}
 	#about-section-column3{
 		display: none;
@@ -610,22 +630,36 @@ footer a:hover{
 		display: none;
 	} 
 
+	#services-section-container h1{
+		font-size: 24px;
+	}
 
 	#services-section-container{
 		flex-direction: column;
+		padding: 5vh 0px;
 	}
 
 	#services-section-column1, #services-section-column2{
 		width: 100%;
 	}
 
+	#map{
+		padding-top: 0px;
+		height: 45vh;
+	}
 
 	#contact-section-container{
 		flex-direction: column;
+		margin-bottom: 0px;
+	}
+
+	.contact-stack h2{
+		font-size: 22px;
+		margin-bottom: 0px;
 	}
 
 	.contact-stack{
-		flex: 0 1 auto;	
+		flex: 0 1 auto;	 /* For dumb ie */
 	}
 
 	#footer-content{
@@ -644,4 +678,6 @@ footer a:hover{
 
 }
 
+@media only screen and (max-width: 768px){
 
+}

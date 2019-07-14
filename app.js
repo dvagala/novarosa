@@ -44,7 +44,7 @@ function detailsTabTransitionWorkarond() {
 
 detailsTabTransitionWorkarond();
 
-// For smooth scroll to anchor
+// For smooth scroll to element
 $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top

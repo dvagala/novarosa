@@ -89,3 +89,11 @@ for (let index = 0; index < navLinks.length; index++) {
 
 
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function(){
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scroll-to-top-button").classList.add("visible");
+    } else {
+        document.getElementById("scroll-to-top-button").classList.remove("visible");
+    }
+};

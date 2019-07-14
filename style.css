@@ -32,9 +32,6 @@ button, h1, h2, h3, h4, p, small, li, a{
 	letter-spacing: 2.2px;
 }
 
-
-
-
 h1{
 	color: #1e1e1e;
 	font-weight: 600;
@@ -145,12 +142,52 @@ img{
 	color: #000;
 }
 
-
-#menu-button{
-	cursor: pointer;
-	width: 16px;
-	display: none;
+#main-nav.main-nav-mobile-opened{
+	z-index: 1;
+	opacity: 1;
 }
+
+.menu-button{
+	display: none;
+	/* position: absolute; */
+	right: 0;
+	margin-right: 4%;
+	cursor: pointer;
+	width: 26px;
+	height: 26px;
+	flex-shrink: 0;
+	padding: 5px;
+	z-index: 2;
+}
+
+.menu-button div{
+	width: 100%;
+	height: 2px;
+	margin: 3px 0px;
+	background-color: #000;
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+
+.main-nav-mobile-opened div{
+	background-color: #fff;
+	z-index: 2;
+}
+
+.main-nav-mobile-opened .menu-burger-line1{
+	transform: translate(0px, 5px) rotate(-45deg) ;
+}
+
+.main-nav-mobile-opened .menu-burger-line2{
+	opacity: 0;
+}
+
+.main-nav-mobile-opened .menu-burger-line3{
+	transform: translate(0px, -5px) rotate(45deg) ;
+}
+
+
+
 
 
 
@@ -501,6 +538,10 @@ footer a:hover{
   from { opacity: 0;}
 }
 
+@keyframes fade-out{
+	to { opacity: 0;}
+  }
+
 @keyframes settle-in-from-top {
   from {margin-top: -45px; opacity: 0;}
 }
@@ -558,20 +599,51 @@ footer a:hover{
 
 	#novarosa-logo{
 		margin: 0px auto 5px auto;
-		width: 100%;
 		text-align: center;
 	}
 	#novarosa-logo img{
 		height: 40px;
 	}
+
 	#main-nav{
 		display: none;
 	}
-	#menu-button{
-		position: absolute;
+
+	.menu-button{
 		display: block;
-		right: 0;
-		margin-right: 5%;
+	}
+
+	#main-nav{
+		opacity: 0;
+		top: 0px;
+		position: fixed;
+		background-color: #1e1e1eea;
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation-name: fade-in;
+		animation-duration: 0.3s;
+		animation-timing-function: ease-out;
+		transition: all 0.3s;
+		z-index: -1;
+	}
+
+	#main-nav ul{	
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#main-nav li{
+		color: #fff;
+		padding: 15px 15px;
+		text-transform: uppercase;
+	}
+	
+	#main-nav li:hover{
+		background-color: transparent;
+		color: #929292;
 	}
 
 

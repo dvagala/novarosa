@@ -28,43 +28,47 @@
     </div>
     <script>
         // For mobile menu
-        function hideOrShowMobileMenu(){
+        function showMobileMenu(){
+            menuButton.classList.add("main-nav-mobile-opened");
+            mainNav.classList.add("main-nav-mobile-opened");
 
-            console.log("menu_clicked");
+            document.documentElement.style.overflowY = 'hidden';
+            document.body.scroll = "no";
+        }
 
-            menuButton.classList.toggle("main-nav-mobile-opened");
-            mainNav.classList.toggle("main-nav-mobile-opened");
+        function hideMobileMenu(){
+            menuButton.classList.remove("main-nav-mobile-opened");
+            mainNav.classList.remove("main-nav-mobile-opened");
 
-            if(mainNav.classList.contains("main-nav-mobile-opened")){
-                document.documentElement.style.overflowY = 'hidden';
-                document.body.scroll = "no";
-            }else{
-                document.documentElement.style.overflowY = 'scroll';
-                document.body.scroll = "yes";
-            }
+            document.documentElement.style.overflowY = 'scroll';
+            document.body.scroll = "yes";            
         }
 
         mainNav = document.querySelector("#main-nav");
 
         menuButton = document.querySelector(".menu-button");
         menuButton.addEventListener("click", function(){
-            if(menuButton.style.display != "none"){
-                hideOrShowMobileMenu();
+            if(mainNav.classList.contains("main-nav-mobile-opened")){
+                hideMobileMenu();
+            }else{
+                showMobileMenu();
             }
         });
 
+        // If user click on empty space areound mobile menu
         mainNav.addEventListener("click", function(){
-            if(menuButton.style.display != "none"){
-                hideOrShowMobileMenu();
+            if(mainNav.classList.contains("main-nav-mobile-opened")){
+                hideMobileMenu();
             }
         });
 
         navLinks = document.querySelectorAll("#main-nav a");
-
         for (let index = 0; index < navLinks.length; index++) {
             navLinks[index].addEventListener("click", function(){
                 if(mainNav.classList.contains("main-nav-mobile-opened")){
-                    hideOrShowMobileMenu();
+                    hideMobileMenu();
+                }else{
+                    showMobileMenu();
                 }
             });
         }

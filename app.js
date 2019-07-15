@@ -98,9 +98,14 @@ for (let index = 0; index < navLinks.length; index++) {
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function(){
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
         document.getElementById("scroll-to-top-button").classList.add("visible");
     } else {
         document.getElementById("scroll-to-top-button").classList.remove("visible");
     }
 };
+
+//test for touch events support and if not supported, attach .no-touch class to the HTML tag.
+if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += "no-touch";
+}

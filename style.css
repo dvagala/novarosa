@@ -53,9 +53,6 @@ p{
 	font-size: 15px;
 	/* line-height: 27px; */
 	line-height: calc(9px + 1.9vh);
-	
-
-	/* line-height: 3vh; */
 	color: #939393;
 	font-weight: 300;
 	margin: 17px 0px;
@@ -109,6 +106,7 @@ img{
 	text-decoration: none;
 	position: sticky;
 	top: 0px;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
 #novarosa-logo img{
@@ -137,7 +135,12 @@ img{
 	transition: background-color 0.3s, color 0.3s;
 }
 
-#main-nav li:hover{
+a{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0.062);
+}
+
+
+.no-touch #main-nav li:hover{
 	background-color: #F2F2F2;
 	color: #000;
 }
@@ -365,6 +368,7 @@ img{
 	justify-content: space-between;
 	align-items: center;
 	border-top: solid 1px #E5E5E5;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0.027);
 }
 
 #services-section-column2 > div:first-child {
@@ -396,6 +400,7 @@ img{
 	color: #020202;
 	line-height: 20px;
 	font-weight: 500;
+	padding-right: 10px;
 }
 
 .summary-tab .black-triangle{
@@ -462,7 +467,7 @@ img{
 	color: #333;
 }
 
-.contact-stack a:hover{
+.no-touch .contact-stack a:hover{
 	color: #000;
 }
 
@@ -482,9 +487,13 @@ img{
 	transition: all 0.5s ease-out;
 }
 
-#scroll-to-top-button:hover{
+.no-touch  #scroll-to-top-button:hover{
 	background-color: #636363;
 }
+
+#scroll-to-top-button:visited, #scroll-to-top-button:active {
+	color: red;
+  }
 
 #scroll-to-top-button.visible{
 	opacity: 1;
@@ -530,7 +539,7 @@ footer a{
 	transition: color 0.3s;
 }
 
-footer a:hover{
+.no-touch footer a:hover{
 	color: #efefef;
 }
 

@@ -190,10 +190,6 @@ a{
 }
 
 
-
-
-
-
 /*--landing-image------------------------------------------------------------------------------*/
 
 #landing-image-container{
@@ -223,7 +219,6 @@ a{
 .dress-offer-stack{
 	text-align: center;
 	flex: 1;
-	/* margin: 0px 7px; */
 }
 
 .dress-offer-stack h2{
@@ -679,7 +674,7 @@ footer a{
 		text-transform: uppercase;
 	}
 	
-	#main-nav li:hover{
+	.no-touch #main-nav li:hover{
 		background-color: transparent;
 		color: #929292;
 	}

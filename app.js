@@ -54,48 +54,6 @@ $('a').click(function(){
 });
 
 
-
-// For mobile menu
-function hideOrShowMobileMenu(){
-    menuButton.classList.toggle("main-nav-mobile-opened");
-    mainNav.classList.toggle("main-nav-mobile-opened");
-
-    if(mainNav.classList.contains("main-nav-mobile-opened")){
-        document.documentElement.style.overflowY = 'hidden';
-        document.body.scroll = "no";
-    }else{
-        document.documentElement.style.overflowY = 'scroll';
-        document.body.scroll = "yes";
-    }
-}
-
-mainNav = document.querySelector("#main-nav");
-
-menuButton = document.querySelector(".menu-button");
-menuButton.addEventListener("click", function(){
-    if(menuButton.style.display != "none"){
-        hideOrShowMobileMenu();
-    }
-});
-
-mainNav.addEventListener("click", function(){
-    if(menuButton.style.display != "none"){
-        hideOrShowMobileMenu();
-    }
-});
-
-navLinks = document.querySelectorAll("#main-nav a");
-
-for (let index = 0; index < navLinks.length; index++) {
-    navLinks[index].addEventListener("click", function(){
-        if(mainNav.classList.contains("main-nav-mobile-opened")){
-            hideOrShowMobileMenu();
-        }
-    });
-}
-
-
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function(){
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {

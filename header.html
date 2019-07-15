@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header-container">
+        <a id="novarosa-logo" href="index.html">
+            <img src="images/novarosa-logo.svg">
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <a href="index.html#dummy-page-top"><li>Domov</li></a>
+                <a href="index.html#about-section-container"><li>O nás</li></a>
+                <a href="#services-section-container"><li>Služby</li></a>
+                <a href="gallery.html"><li>Galéria</li></a>
+                <a href="#map"><li>Kontakt</li></a>
+            </ul>
+        </nav>
+        <div class="menu-button">
+            <div class="menu-burger-line1"></div>
+            <div class="menu-burger-line2"></div>
+            <div class="menu-burger-line3"></div>
+        </div>
+    </div>
+    <script>
+        // For mobile menu
+        function hideOrShowMobileMenu(){
+            menuButton.classList.toggle("main-nav-mobile-opened");
+            mainNav.classList.toggle("main-nav-mobile-opened");
+
+            if(mainNav.classList.contains("main-nav-mobile-opened")){
+                document.documentElement.style.overflowY = 'hidden';
+                document.body.scroll = "no";
+            }else{
+                document.documentElement.style.overflowY = 'scroll';
+                document.body.scroll = "yes";
+            }
+        }
+
+        mainNav = document.querySelector("#main-nav");
+
+        menuButton = document.querySelector(".menu-button");
+        menuButton.addEventListener("click", function(){
+            if(menuButton.style.display != "none"){
+                hideOrShowMobileMenu();
+            }
+        });
+
+        mainNav.addEventListener("click", function(){
+            if(menuButton.style.display != "none"){
+                hideOrShowMobileMenu();
+            }
+        });
+
+        navLinks = document.querySelectorAll("#main-nav a");
+
+        for (let index = 0; index < navLinks.length; index++) {
+            navLinks[index].addEventListener("click", function(){
+                if(mainNav.classList.contains("main-nav-mobile-opened")){
+                    hideOrShowMobileMenu();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

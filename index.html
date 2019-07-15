@@ -1,5 +1,3 @@
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,30 +10,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="app.js"></script>
 </head>
 <body ontouchstart="">
-	<div id="mydiv"></div>
 	<div id="dummy-page-top"></div>
+
 	<header id="sticky-header">
-		<div id="header-container">
-			<a id="novarosa-logo" href="index.html">
-				<img src="images/novarosa-logo.svg">
-			</a>
-			<nav id="main-nav">
-				<ul>
-					<a href="#dummy-page-top"><li>Domov</li></a>
-					<a href="#about-section-container"><li>O nás</li></a>
-					<a href="#services-section-container"><li>Služby</li></a>
-					<a href="gallery.html"><li>Galéria</li></a>
-					<a href="#map"><li>Kontakt</li></a>
-				</ul>
-			</nav>
-			<div class="menu-button">
-				<div class="menu-burger-line1"></div>
-				<div class="menu-burger-line2"></div>
-				<div class="menu-burger-line3"></div>
-			</div>
-		</div>
+		<div data-include="header"></div>
 	</header>
 
 	<div id="landing-image-container"></div>
@@ -179,23 +160,16 @@
 		<img src="images/up-arrow.svg" id="up-arrow" alt="">
 	</a>
 
-	<footer>
-		<div id="footer-content">
-			<div id="footer-info">
-				<p>&copy; Copyright Nova Rosa s.r.o. 2008  |  Website design by <a href="">Dominik Vagala</a></p>			
-			</div>
-			<nav id="footer-nav">
-				<ul>
-					<li><a href="#dummy-page-top">Domov</a></li>			
-					<li><a href="#about-section-container">O nás</a></li>
-					<li><a href="#services-section-container">Služby</a></li>
-					<li><a href="gallery.html">Galéria</a></li>
-					<li><a href="#map">Kontakt</a></li>
-				</ul>
-			</nav>
-		</div>
-	</footer>
+	<div data-include="footer" ></div>
 
-	<script src="app.js"></script>
+	<script>
+		$(function(){
+			var includes = $('[data-include]');
+			jQuery.each(includes, function(){
+			var file = '' + $(this).data('include') + '.html';
+			$(this).load(file);
+			});
+		});
+	</script>
 </body>
 </html>				

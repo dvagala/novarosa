@@ -44,6 +44,7 @@ function detailsTabTransitionWorkarond() {
 
 detailsTabTransitionWorkarond();
 
+
 // For smooth scroll to element
 $('a').click(function(){
     $('html, body').animate({
@@ -53,8 +54,8 @@ $('a').click(function(){
 });
 
 
-// For mobile menu
 
+// For mobile menu
 function hideOrShowMobileMenu(){
     menuButton.classList.toggle("main-nav-mobile-opened");
     mainNav.classList.toggle("main-nav-mobile-opened");
@@ -72,18 +73,24 @@ mainNav = document.querySelector("#main-nav");
 
 menuButton = document.querySelector(".menu-button");
 menuButton.addEventListener("click", function(){
-    hideOrShowMobileMenu();
+    if(menuButton.style.display != "none"){
+        hideOrShowMobileMenu();
+    }
 });
 
 mainNav.addEventListener("click", function(){
-    hideOrShowMobileMenu();
+    if(menuButton.style.display != "none"){
+        hideOrShowMobileMenu();
+    }
 });
 
 navLinks = document.querySelectorAll("#main-nav a");
 
 for (let index = 0; index < navLinks.length; index++) {
     navLinks[index].addEventListener("click", function(){
-        hideOrShowMobileMenu();
+        if(mainNav.classList.contains("main-nav-mobile-opened")){
+            hideOrShowMobileMenu();
+        }
     });
 }
 

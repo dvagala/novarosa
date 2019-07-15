@@ -16,7 +16,7 @@
 	<div id="dummy-page-top"></div>
 
 	<header id="sticky-header">
-		<div data-include="header"></div>
+		<!-- <div data-include="header"></div> -->
 	</header>
 
 	<div id="landing-image-container"></div>
@@ -160,16 +160,16 @@
 		<img src="images/up-arrow.svg" id="up-arrow" alt="">
 	</a>
 
-	<div data-include="footer" ></div>
+	<!-- <div data-include="footer" ></div> -->
 
 	<script>
-		$(function(){
-			var includes = $('[data-include]');
-			jQuery.each(includes, function(){
-			var file = '' + $(this).data('include') + '.html';
-			$(this).load(file);
-			});
-		});
+		// $(function(){
+		// 	var includes = $('[data-include]');
+		// 	jQuery.each(includes, function(){
+		// 	var file = '' + $(this).data('include') + '.html';
+		// 	$(this).load(file);
+		// 	});
+		// });
 	</script>
 </body>
 </html>				

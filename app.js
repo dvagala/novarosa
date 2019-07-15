@@ -25,10 +25,11 @@ function detailsTabTransitionWorkarond() {
 
     var summaryTabs = document.querySelectorAll(".summary-tab");
     var detailTabs = document.querySelectorAll(".details-tab");
+    console.log(document.querySelector("body"));
 
     for (let index = 0; index < summaryTabs.length; index++) {
 
-        var summaryTab = summaryTabs[index];
+    var summaryTab = summaryTabs[index];
         var detailTab = detailTabs[index];
 
         detailTab.style.height = "100%";
@@ -46,12 +47,12 @@ detailsTabTransitionWorkarond();
 
 
 // For smooth scroll to element
-$('a').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
-});
+// $('a').click(function(){
+//     $('html, body').animate({
+//         scrollTop: $( $(this).attr('href') ).offset().top
+//     }, 500);
+//     return false;
+// });
 
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -67,3 +68,5 @@ window.onscroll = function(){
 if (!("ontouchstart" in document.documentElement)) {
     document.documentElement.className += "no-touch";
 }
+
+window.scrollBy({ top: 1000, left: 0, behavior: 'smooth' });

@@ -15,9 +15,9 @@
             <ul>
                 <a href="index.html#dummy-page-top"><li>Domov</li></a>
                 <a href="index.html#about-section-container"><li>O nás</li></a>
-                <a href="#services-section-container"><li>Služby</li></a>
+                <a href="index.html#services-section-container"><li>Služby</li></a>
                 <a href="gallery.html"><li>Galéria</li></a>
-                <a href="#map"><li>Kontakt</li></a>
+                <a href="index.html#map"><li>Kontakt</li></a>
             </ul>
         </nav>
         <div class="menu-button">
@@ -29,6 +29,9 @@
     <script>
         // For mobile menu
         function hideOrShowMobileMenu(){
+
+            console.log("menu_clicked");
+
             menuButton.classList.toggle("main-nav-mobile-opened");
             mainNav.classList.toggle("main-nav-mobile-opened");
 

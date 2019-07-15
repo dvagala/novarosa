@@ -486,32 +486,18 @@ img{
 	background-color: #636363;
 }
 
-
 #scroll-to-top-button.visible{
 	opacity: 1;
 	z-index: 0;
 }
 
-.up-arrow{
-
+#scroll-to-top-button #up-arrow{
+	width: 15px;
+	display: block;
+	margin: 0px auto;
+	margin-top: 15px;
 }
 
-.up-arrow div{
-	height: 3px;
-	width: 10px;
-	background-color: white;
-	position: absolute;
-	border-radius: 5px;
-}
-
-.up-arrow-first{
-	transform: translate(10px,20px) rotate(-45deg);
-}
-
-.up-arrow-second{
-	transform: translate(16px,20px) rotate(45deg);
-
-}
 
 /*ANCHOR footer*/
 

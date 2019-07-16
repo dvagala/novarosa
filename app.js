@@ -49,3 +49,23 @@ if (!("ontouchstart" in document.documentElement)) {
     document.documentElement.className += "no-touch";
 }
 
+// // remove fragment as much as it can go without adding an entry in browser history:
+
+// // slice off the remaining '#' in HTML5:    
+// if (typeof window.history.replaceState == 'function') {
+//   history.replaceState({}, '', window.location.href.slice(0, -1));
+// }
+
+// $(function(){
+//     // Remove the # from the hash, as different browsers may or may not include it
+//     var hash = location.hash.replace('#','');
+
+//     if(hash != ''){
+//         // Show the hash if it's set
+//         alert(hash);
+
+//         // Clear the hash in the URL
+//         location.hash = '';
+//     }
+// });
+

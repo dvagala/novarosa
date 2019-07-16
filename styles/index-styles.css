@@ -132,7 +132,7 @@ p{
 
 /*---About section--------------------------------------------------------------------------- */
 
-#about-section-container{
+.about-section-container{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -140,7 +140,7 @@ p{
 	padding-bottom: 120px;
 }
 
-#about-section-container img{
+.about-section-container img{
 	width: 100%;
 }
 
@@ -176,7 +176,7 @@ p{
 
 /*---Services section--------------------------------------------------------------------------- */
 
-#services-section-container{
+.services-section-container{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -274,7 +274,7 @@ p{
 
 /*---Map--------------------------------------------------------------------------- */
 
-#map{
+.map{
 	width: 100%;
 	height: 600px;
 	border: none;
@@ -404,7 +404,7 @@ p{
 	}
 
 
-	#about-section-container{
+	.about-section-container{
 		padding: 5vh 0px;
 		flex-direction: column;
 		max-height: 1000px;	/*For dumb ie*/
@@ -432,11 +432,11 @@ p{
 		display: none;
 	} 
 
-	#services-section-container h1{
+	.services-section-container h1{
 		font-size: 24px;
 	}
 
-	#services-section-container{
+	.services-section-container{
 		flex-direction: column;
 		padding: 5vh 0px;
 	}
@@ -445,7 +445,7 @@ p{
 		width: 100%;
 	}
 
-	#map{
+	.map{
 		padding-top: 0px;
 		height: 45vh;
 	}
@@ -453,6 +453,12 @@ p{
 	#contact-section-container{
 		flex-direction: column;
 		margin-bottom: 0px;
+	}
+
+	.contact-stack p{
+		font-size: 15px;
+		letter-spacing: 2.2px;
+		line-height: 1.5em;
 	}
 
 	.contact-stack h2{

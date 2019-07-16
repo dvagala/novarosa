@@ -8,16 +8,16 @@
 </head>
 <body>
     <div id="header-container">
-        <a id="novarosa-logo" href="index.html">
+        <a id="novarosa-logo" href="/novarosa">
             <img src="images/novarosa-logo.svg">
         </a>
         <nav id="main-nav">
             <ul>
-                <a href="index.html#dummy-page-top"><li>Domov</li></a>
-                <a href="index.html#about-section-container"><li>O nás</li></a>
-                <a href="index.html#services-section-container"><li>Služby</li></a>
+                <a href="/novarosa#home"><li>Domov</li></a>
+                <a href="/#about"><li>O nás</li></a>
+                <a href="/novarosa.html#services"><li>Služby</li></a>
                 <a href="gallery.html"><li>Galéria</li></a>
-                <a href="index.html#map"><li>Kontakt</li></a>
+                <a href="/novarosa#contact"><li>Kontakt</li></a>
             </ul>
         </nav>
         <div class="menu-button">
@@ -27,6 +27,8 @@
         </div>
     </div>
     <script>
+        mainNav = document.querySelector("#main-nav");
+
         // For mobile menu
         function showMobileMenu(){
             menuButton.classList.add("main-nav-mobile-opened");
@@ -34,6 +36,8 @@
 
             document.documentElement.style.overflowY = 'hidden';
             document.body.scroll = "no";
+
+            mainNav.style.zIndex = 1;
         }
 
         function hideMobileMenu(){
@@ -41,10 +45,10 @@
             mainNav.classList.remove("main-nav-mobile-opened");
 
             document.documentElement.style.overflowY = 'scroll';
-            document.body.scroll = "yes";            
+            document.body.scroll = "yes";        
+            
+            setTimeout(function() { mainNav.style.zIndex = -1; }, 400);
         }
-
-        mainNav = document.querySelector("#main-nav");
 
         menuButton = document.querySelector(".menu-button");
         menuButton.addEventListener("click", function(){
@@ -65,10 +69,12 @@
         navLinks = document.querySelectorAll("#main-nav a");
         for (let index = 0; index < navLinks.length; index++) {
             navLinks[index].addEventListener("click", function(){
+                $("a[href^=#]").on("click", function(e) {
+                    e.preventDefault();
+                    history.pushState({}, "", this.href);
+                });
                 if(mainNav.classList.contains("main-nav-mobile-opened")){
                     hideMobileMenu();
-                }else{
-                    showMobileMenu();
                 }
             });
         }

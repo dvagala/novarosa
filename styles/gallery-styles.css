@@ -1,35 +1,26 @@
 
-.gallery-container{
-
-}
-
 
 .dress-gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1344px;
-    margin: 0px auto;
+    margin: 30px auto;
     padding: 2px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .dress-gallery img{
     display: block;
-    /* max-width: 500px; */
-    /* width: 50%; */
-    /* width: 170px;  */
-    /* height: auto; */
-    /* height: 250px; 
-     width: auto; */
+    height: 310px;
+    width: auto;
 }
 
 .image-container{
     position: relative;
     display: block;
-    /* margin: 2px; */
-    padding: 2px;
-    /* width: 300px; */
+    /* padding: 2px; */
+    margin: 2px;
 }
 
 .overlay{
@@ -43,7 +34,18 @@
     transition: opacity 0.4s;
 }
 
-.image-container:hover .overlay{
+.no-touch .image-container:hover .overlay{
     opacity: 0.4;
 }
 
+@media only screen and (max-width: 640px){
+    .dress-gallery img{
+        height: 47vw;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    .dress-gallery img{
+        height: 70vw;
+    }
+}

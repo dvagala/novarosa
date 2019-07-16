@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    	<a href="#dummy-page-top" id="scroll-to-top-button">
+                <img src="images/up-arrow.svg" id="up-arrow" alt="">
+            </a>
+
     <footer>
             <div id="footer-content">
                 <div id="footer-info">
@@ -32,6 +36,15 @@
         //     }, 500);
         //     return false;
         // });
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function(){
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("scroll-to-top-button").classList.add("visible");
+            } else {
+                document.getElementById("scroll-to-top-button").classList.remove("visible");
+            }
+        };
     </script>
 </body>
 </html>

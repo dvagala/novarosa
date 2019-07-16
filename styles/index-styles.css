@@ -5,7 +5,6 @@
 	padding: 37px 25px;
 }
 
-
 hr{
 	height: 1px;
 	color: #7A7A7A;
@@ -63,7 +62,6 @@ p{
 
 
 /*ANCHOR dress offer*/
-
 /*--dress-offer----------------------------------------------------------------------------------*/
 
 #dress-offer-container{	
@@ -129,7 +127,6 @@ p{
 
 
 /*ANCHOR about section*/
-
 /*---About section--------------------------------------------------------------------------- */
 
 .about-section-container{
@@ -171,9 +168,7 @@ p{
 }
 
 
-
 /*ANCHOR services section*/
-
 /*---Services section--------------------------------------------------------------------------- */
 
 .services-section-container{
@@ -271,7 +266,6 @@ p{
 }
 
 /*ANCHOR contact section*/
-
 /*---Map--------------------------------------------------------------------------- */
 
 .map{
@@ -294,7 +288,7 @@ p{
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	margin-bottom: 165px;
+	margin-bottom: 90px;
 }
 
 .contact-stack{
@@ -325,7 +319,6 @@ p{
 
 
 /*ANCHOR animations*/
-
 /*--animations-----------------------------------------------------------------------------*/
 
 @keyframes fade-in{
@@ -385,7 +378,6 @@ p{
 		padding: 25px 10px;
 	}
 
-
 	.dress-offer-stack h2{
 		line-height: 16px;
 		word-spacing: 30000px; 
@@ -402,7 +394,6 @@ p{
 	#whole-offer-button{
 		margin-top: -2px;
 	}
-
 
 	.about-section-container{
 		padding: 5vh 0px;
@@ -469,5 +460,4 @@ p{
 	.contact-stack{
 		flex: 0 1 auto;	 /* For dumb ie */
 	}
-
 }

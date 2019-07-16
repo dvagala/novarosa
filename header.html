@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Header</title>
 </head>
 <body>
     <div id="header-container">
-        <a id="novarosa-logo" href="/novarosa">
-            <img src="images/novarosa-logo.svg">
+        <a id="novarosa-logo" href="/">
+            <img src="images/novarosa-logo.svg" alt="logo">
         </a>
         <nav id="main-nav">
             <ul>
-                <a href="/novarosa#home"><li>Domov</li></a>
+                <a href="/#home"><li>Domov</li></a>
                 <a href="/#about"><li>O nás</li></a>
-                <a href="/novarosa.html#services"><li>Služby</li></a>
-                <a href="gallery.html"><li>Galéria</li></a>
-                <a href="/novarosa#contact"><li>Kontakt</li></a>
+                <a href="/#services"><li>Služby</li></a>
+                <a href="/gallery"><li>Galéria</li></a>
+                <a href="/#contact"><li>Kontakt</li></a>
             </ul>
         </nav>
         <div class="menu-button">
@@ -69,10 +69,6 @@
         navLinks = document.querySelectorAll("#main-nav a");
         for (let index = 0; index < navLinks.length; index++) {
             navLinks[index].addEventListener("click", function(){
-                $("a[href^=#]").on("click", function(e) {
-                    e.preventDefault();
-                    history.pushState({}, "", this.href);
-                });
                 if(mainNav.classList.contains("main-nav-mobile-opened")){
                     hideMobileMenu();
                 }

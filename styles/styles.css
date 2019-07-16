@@ -144,9 +144,6 @@ a{
 	transform: translate(0px, -5px) rotate(45deg) ;
 }
 
-
-
-
 #scroll-to-top-button{
 	opacity: 0;
 	z-index: -1;
@@ -162,8 +159,8 @@ a{
 	transition: all 0.5s ease-out;
 }
 
-/*ANCHOR scroll-to-top*/
 
+/*ANCHOR scroll-to-top*/
 /*--scroll-to-top-----------------------------------------------------------------------------*/
 
 .no-touch  #scroll-to-top-button:hover{
@@ -188,7 +185,6 @@ a{
 
 
 /*ANCHOR footer*/
-
 /*--footer-----------------------------------------------------------------------------*/
 
 footer{
@@ -223,7 +219,6 @@ footer a{
 	color: #efefef;
 }
 
-
 #footer-nav ul{	
 	display: flex;
 	list-style: none;
@@ -249,9 +244,6 @@ footer a{
 }
 
 
-
-
-
 /*--respnsive-----------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1500px){
@@ -271,6 +263,7 @@ footer a{
 		position: static;
 	}
 }
+
 
 /*ANCHOR responsive mobile*/
 
@@ -293,14 +286,14 @@ footer a{
 		top: 0px;
 		left: 0px;
 		position: absolute;
-		background-color: rgba(30, 30, 30, 0.918);
+		background-color: rgba(30, 30, 30, 0.932);
 		height: 100vh;
 		width: 100%; 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: opacity 0.3s;
-		/* z-index: -1; */
+		z-index: -1;
 	}
 
 	#main-nav ul{	
@@ -332,9 +325,4 @@ footer a{
 		margin: 0px;
 		margin-top: 20px;
 	}
-
-}
-
-@media only screen and (max-width: 768px){
-
 }

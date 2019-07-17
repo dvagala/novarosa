@@ -1,0 +1,50 @@
+
+
+.dress-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1344px;
+    margin: 30px auto;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.dress-gallery img{
+    display: block;
+    height: 310px;
+    width: auto;
+}
+
+.image-container{
+    position: relative;
+    display: block;
+    margin: 2px;
+}
+
+.overlay{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.no-touch .image-container:hover .overlay{
+    opacity: 0.4;
+}
+
+@media only screen and (max-width: 640px){
+    .dress-gallery img{
+        height: 47vw;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    .dress-gallery img{
+        height: 70vw;
+    }
+}

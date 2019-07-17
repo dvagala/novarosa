@@ -52,7 +52,7 @@
 
 		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="gallery_images/IMG_3472.jpg" class="image-container" itemprop="contentUrl" data-size="767x1150">
-				<img src="gallery_images/IMG_3472_thumb.jpg" itemprop="thumbnail" alt="svadobné šaty" />
+				<img src="gallery_images/IMG_3472.jpg" itemprop="thumbnail" alt="svadobné šaty" />
 				<div class="overlay"></div>
 			</a>
 		</figure>
@@ -430,6 +430,19 @@
 	</script>
 	<script src="photoswipe/photoswipe.min.js"></script> 
 	<script src="photoswipe/photoswipe-ui-default.min.js"></script> 
+	<script>
+		// Replace thumbnais with full resotuion images after whole page loaded
+		window.onload = function () { 
+			var thumbElements = document.querySelectorAll('img[itemprop="thumbnail"]');
+			console.log(thumbElements);
+
+			for (let index = 0; index < thumbElements.length; index++) {
+				const thumbElement = thumbElements[index];
+				var fullResImage = thumbElement.parentElement.getAttribute('href');
+				thumbElement.setAttribute("src", fullResImage);
+			}
+		 }
+	</script>
 	<script>
 		var initPhotoSwipeFromDOM = function(gallerySelector) {
 			// parse slide data (url, title, size ...) from DOM elements 

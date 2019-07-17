@@ -374,8 +374,8 @@ p{
 		height: 208px;
 	}
 
-	#main-container{
-		padding: 25px 10px;
+	.page-content-container{
+		padding-top: 23px;
 	}
 
 	.dress-offer-stack h2{
@@ -389,7 +389,7 @@ p{
 		margin-bottom: 11px;
 	}
 	#whole-offer-button-container{
-		height: 110px;
+		height: 100px;
 	}
 	#whole-offer-button{
 		margin-top: -2px;
@@ -423,7 +423,7 @@ p{
 		display: none;
 	} 
 
-	.services-section-container h1{
+	#services-section-column1 h1{
 		font-size: 24px;
 	}
 
@@ -434,6 +434,17 @@ p{
 
 	#services-section-column1, #services-section-column2{
 		width: 100%;
+	}
+
+	.summary-tab h3{
+		font-size: 17px;
+		color: #020202;
+		line-height: normal;
+	}
+
+	.details-tab p{
+		margin-top: 14px;
+		font-size: 16px;
 	}
 
 	.map{

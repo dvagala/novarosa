@@ -1,0 +1,366 @@
+/*ANCHOR global*/
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background: #333;
+  /* WebKit/Blink Browsers */
+  color: #fff;
+}
+
+::selection {
+  background: #333;
+  /* WebKit/Blink Browsers */
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #333;
+  /* Gecko Browsers */
+  color: #fff;
+}
+
+img {
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+/*--header------------------------------------------------------------------------------*/
+/*ANCHOR header*/
+#sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+#header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+#novarosa-logo {
+  margin-left: 15.2%;
+  -webkit-transition: margin-left 1s;
+  transition: margin-left 1s;
+  text-decoration: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#novarosa-logo img {
+  margin-top: 23px;
+  height: 52px;
+}
+
+#main-nav {
+  margin-right: 13.9%;
+  -webkit-transition: margin 1s;
+  transition: margin 1s;
+}
+
+#main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+#main-nav li {
+  padding: 37px 15px;
+  white-space: nowrap;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 3.4px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.062);
+}
+
+.no-touch #main-nav li:hover {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+#main-nav.main-nav-mobile-opened {
+  z-index: 1;
+  opacity: 1;
+}
+
+.menu-button {
+  display: none;
+  position: absolute;
+  right: 0px;
+  margin-right: 4%;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 5px;
+  z-index: 2;
+}
+
+.menu-button div {
+  width: 100%;
+  height: 2px;
+  margin: 3px 0px;
+  background-color: #000;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.menu-button.main-nav-mobile-opened div {
+  background-color: #fff;
+  z-index: 2;
+}
+
+.menu-button.main-nav-mobile-opened .menu-burger-line1 {
+  -webkit-transform: translate(0px, 5px) rotate(-45deg);
+          transform: translate(0px, 5px) rotate(-45deg);
+}
+
+.menu-button.main-nav-mobile-opened .menu-burger-line2 {
+  opacity: 0;
+}
+
+.menu-button.main-nav-mobile-opened .menu-burger-line3 {
+  -webkit-transform: translate(0px, -5px) rotate(45deg);
+          transform: translate(0px, -5px) rotate(45deg);
+}
+
+#scroll-to-top-button {
+  opacity: 0;
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background-color: #dd4d4d;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  color: white;
+  margin: 20px;
+  border-radius: 3px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+/*ANCHOR scroll-to-top*/
+/*--scroll-to-top-----------------------------------------------------------------------------*/
+.no-touch #scroll-to-top-button:hover {
+  background-color: #636363;
+}
+
+#scroll-to-top-button:visited, #scroll-to-top-button:active {
+  color: red;
+}
+
+#scroll-to-top-button.visible {
+  opacity: 1;
+  z-index: 0;
+}
+
+#scroll-to-top-button #up-arrow {
+  width: 15px;
+  display: block;
+  margin: 0px auto;
+  margin-top: 15px;
+}
+
+/*ANCHOR footer*/
+/*--footer-----------------------------------------------------------------------------*/
+footer {
+  background-color: #22394c;
+}
+
+#footer-content {
+  max-width: 1350px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer-info p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #aaa;
+  font-family: "Lato";
+  white-space: pre-wrap;
+  margin: 17px 0px;
+}
+
+footer a {
+  color: #7496AB;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.no-touch footer a:hover {
+  color: #efefef;
+}
+
+#footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 25px 0px;
+  margin-left: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* flex-wrap: nowrap; */
+}
+
+#footer-nav li {
+  font-family: "Lato";
+  margin: 8px 0px;
+  font-size: 15px;
+  letter-spacing: 4.3px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+#footer-nav li:not(:first-child):before {
+  content: "|";
+  color: #aaa;
+  margin: 0px 5px;
+}
+
+/*--respnsive-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 1500px) {
+  #novarosa-logo {
+    margin-left: 5.5%;
+  }
+  #main-nav {
+    margin-right: 3.9%;
+  }
+}
+
+/*ANCHOR responsive tablet*/
+@media only screen and (max-width: 1000px) {
+  #sticky-header {
+    position: static;
+  }
+}
+
+/*ANCHOR responsive mobile*/
+@media only screen and (max-width: 768px) {
+  #novarosa-logo {
+    margin: 0px auto 5px auto;
+    text-align: center;
+  }
+  #novarosa-logo img {
+    height: 40px;
+  }
+  .menu-button {
+    display: block;
+  }
+  #main-nav {
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.932);
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+  #main-nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main-nav li {
+    color: #fff;
+    padding: 15px 15px;
+    text-transform: uppercase;
+  }
+  .no-touch #main-nav li:hover {
+    background-color: transparent;
+    color: #929292;
+  }
+  #footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #footer-info p {
+    text-align: center;
+  }
+  #footer-nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px;
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=test.css.map */
